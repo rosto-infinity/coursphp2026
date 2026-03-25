@@ -6,6 +6,7 @@
 
 // Noms de variables VALIDES
 $nomUtilisateur = "Alice";
+echo "$nomUtilisateur";
 $nom_utilisateur = "Bob";
 $_prive = "secret";
 $article1 = "premier";
