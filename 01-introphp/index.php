@@ -12,6 +12,23 @@
     </p>
     <p>Heure actuelle : <?= date("H:i:s") ?></p>
 <!-- Équivalent à : <?php echo date("H:i:s"); ?> -->
+
+
+<?php
+// Commentaire sur une seule ligne
+
+# Autre commentaire sur une seule ligne (style shell)
+
+/*
+  Commentaire sur plusieurs lignes
+  pour des explications plus longues
+*/
+
+/**
+ * Commentaire DocBlock
+ * Utilisé pour la documentation technique
+ * @param string $nom Le nom de l'utilisateur
+ */
 </body>
 
 </html>
