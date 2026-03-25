@@ -29,6 +29,15 @@
  * Utilisé pour la documentation technique
  * @param string $nom Le nom de l'utilisateur
  */
+
+?>
+
+<a href="index.php">Accueil</a> <br />
+<a href="01-code.php">Code</a><br />
+<a href="02-variable.php">Variables</a><br />
+<a href="03-datatype.php">Data type</a><br />
+
+
 </body>
 
 </html>
