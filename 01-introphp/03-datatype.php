@@ -2,3 +2,29 @@
  echo '<h1> Data type</h1>
  <a href="index.php">Accueil</a> <br />
 ';
+
+$nom ="Prof Waffo";
+$nom2 ="Prof Waffo2";
+$simpleQuote = 'Bonjour';              // Guillemets simples (littéral)
+$doubleQuote = "Bonjour, $nom";   // Guillemets doubles (interpolation)
+
+$simpleQuote = 'Bonjour,' .$nom2. 'et' .$nom;
+$simpleQuote = "Bonjour, $nom2 et $nom";
+
+echo "$doubleQuote
+<br> $simpleQuote <br>";
+
+$heredoc = <<<EOT
+Chaîne sur
+plusieurs lignes
+EOT;
+
+echo $heredoc;
+
+
+$decimal = 42;           // Décimal
+$negatif = -17;          // Négatif
+$octal = 0755;           // Octal (commence par 0)
+$hex = 0xFF;             // Hexadécimal (commence par 0x)
+$binaire = 0b1010;       // Binaire (commence par 0b)
+$lisible = 1_000_000;    // PHP 7.4+ : séparateur de milliers
