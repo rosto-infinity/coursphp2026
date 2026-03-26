@@ -11,15 +11,15 @@ $doubleQuote = "Bonjour, $nom";   // Guillemets doubles (interpolation)
 $simpleQuote = 'Bonjour,' . $nom2 . 'et' . $nom;
 $simpleQuote = "Bonjour, $nom2 et $nom";
 
-echo "$doubleQuote
-<br> $simpleQuote <br>";
+#echo "$doubleQuote
+#<br> $simpleQuote <br>";
 
 $heredoc = <<<EOT
 Chaîne sur
 plusieurs lignes
 EOT;
 
-echo $heredoc;
+#echo $heredoc;
 
 
 $decimal = 42;           // Décimal
@@ -50,7 +50,7 @@ $associatif = [
   "age" => 30
 ];
 
-echo "<br>" . $associatif["nom"];
+#echo "<br>" . $associatif["nom"];
 
 class Utilisateur
 {
@@ -68,10 +68,11 @@ $callback2 = fn($x) => $x * 2;
 
 #Vérification des Types
 
-echo "<br>" . gettype($var);      // Retourne le type sous forme de chaîne
-is_string($var);    // Vérification booléenne
-is_int($var);
-is_float($var);
-is_bool($var);
-is_array($var);
-is_null($var);
+$var = NULL;
+echo "<br>" . gettype($var);     
+echo "<br>" . is_string($var);    
+echo "<br>" . is_int($var);
+echo "<br>" . is_float($var);
+echo "<br>" . is_bool($var);
+echo "<br>" . is_array($var);
+echo "<br>" . is_null($var);
