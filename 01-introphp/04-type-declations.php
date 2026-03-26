@@ -60,3 +60,5 @@ echo $result;
 function deboguer(mixed $valeur): void {
     var_dump($valeur);
 }
+
+echo deboguer('true');
