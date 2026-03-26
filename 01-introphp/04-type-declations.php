@@ -35,3 +35,28 @@ function traiterID(int|string $id): void {
 
 traiterID(42);        // Fonctionne
 traiterID("ABC123");  // Fonctionne aussi
+
+#Types Nullable
+
+function chercher(?int $id): ?int {
+    // $id peut être int ou null
+    // Retourne string ou null
+
+    return $id;
+}
+
+$result = chercher(null);
+echo $result;
+// Syntaxe union PHP 8.0+ (équivalent)
+function chercher2(int|null $id): int|null {
+   return $id;
+}
+
+$result = chercher(4);
+echo $result;
+
+
+#Accepte n'importe quel type :
+function deboguer(mixed $valeur): void {
+    var_dump($valeur);
+}
