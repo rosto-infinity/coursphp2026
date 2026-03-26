@@ -35,3 +35,10 @@ $lisible = 1_000_000;    // PHP 7.4+ : séparateur de milliers
 $prix = 19.99;
 $scientifique = 1.2e3;  // 1200
 $negatif = -0.5;
+
+#4. Boolean (Booléen)
+$estValide = true;
+$aUneErreur = false;
+
+// Valeurs considérées comme "fausses" (falsy) en PHP :
+// false, 0, 0.0, "", "0", [], null
