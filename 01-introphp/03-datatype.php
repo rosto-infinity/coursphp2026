@@ -28,3 +28,10 @@ $octal = 0755;           // Octal (commence par 0)
 $hex = 0xFF;             // Hexadécimal (commence par 0x)
 $binaire = 0b1010;       // Binaire (commence par 0b)
 $lisible = 1_000_000;    // PHP 7.4+ : séparateur de milliers
+
+
+
+#3. Float (Nombre à virgule flottante)
+$prix = 19.99;
+$scientifique = 1.2e3;  // 1200
+$negatif = -0.5;
