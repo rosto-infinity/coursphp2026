@@ -50,7 +50,12 @@ $associatif = [
   "age" => 30
 ];
 
-#echo "<br>" . $associatif["nom"];
+echo "<br>" .var_dump($associatif);
+
+echo "<pre>";
+print_r($associatif);
+echo "</pre>";
+
 
 class Utilisateur
 {
@@ -76,3 +81,21 @@ echo "<br>" . is_float($var);
 echo "<br>" . is_bool($var);
 echo "<br>" . is_array($var);
 echo "<br>" . is_null($var);
+
+
+
+$valeurs = [
+    "Bonjour",
+    42,
+    3.14,
+    true,
+    [1, 2, 3],
+    null
+];
+
+foreach ($valeurs as $valeur) {
+    echo gettype($valeur) . " : ";
+    var_dump($valeur);
+    echo "\n";
+}
+?>
