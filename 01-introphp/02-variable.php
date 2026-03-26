@@ -11,7 +11,7 @@ $age = 25;           // Entier (Integer)
 $prix = 19.99;       // Nombre à virgule (Float)
 $estActif = true;    // Booléen (Boolean)
 
-<?php
+
 $nom = "Alice";
 
 isset($nom);       // true - la variable existe et n'est pas nulle

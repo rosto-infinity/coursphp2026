@@ -1,14 +1,14 @@
 <?php
- echo '<h1> Data type</h1>
+echo '<h1> Data type</h1>
  <a href="index.php">Accueil</a> <br />
 ';
 
-$nom ="Prof Waffo";
-$nom2 ="Prof Waffo2";
+$nom = "Prof Waffo";
+$nom2 = "Prof Waffo2";
 $simpleQuote = 'Bonjour';              // Guillemets simples (littéral)
 $doubleQuote = "Bonjour, $nom";   // Guillemets doubles (interpolation)
 
-$simpleQuote = 'Bonjour,' .$nom2. 'et' .$nom;
+$simpleQuote = 'Bonjour,' . $nom2 . 'et' . $nom;
 $simpleQuote = "Bonjour, $nom2 et $nom";
 
 echo "$doubleQuote
@@ -42,3 +42,12 @@ $aUneErreur = false;
 
 // Valeurs considérées comme "fausses" (falsy) en PHP :
 // false, 0, 0.0, "", "0", [], null
+
+#5. Array (Tableau)
+$indexe = [1, 2, 3];
+$associatif = [
+  "nom" => "Jean",
+  "age" => 30
+];
+
+echo "<br>" .$associatif["nom"];
