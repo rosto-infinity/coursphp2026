@@ -37,6 +37,7 @@
 <a href="02-variable.php">Variables</a><br />
 <a href="03-datatype.php">Data type</a><br />
 <a href="04-type-declations.php">Data type</a><br />
+<a href="07-forms-users-input.php">forms-users-input</a><br />
 
 
 </body>
