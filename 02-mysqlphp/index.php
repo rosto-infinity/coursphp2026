@@ -12,7 +12,7 @@ $sql = "SELECT * FROM etudiants";
 
 if ($search !== '') {
     $sql .= " WHERE nom LIKE ? OR email LIKE ?";
-    $term = "%$search%"; //v '%' .$search. '%'
+    $term = "%$search%"; //ou '%' .$search. '%'
     $params = [$term, $term]; // On passe la même valeur deux fois pour les deux '?'
 }
 
