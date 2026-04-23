@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 session_start();
 require_once 'db.php';
@@ -6,14 +7,15 @@ require_once 'flash.php';
 
 
 
-function register(PDO $pdo, string $pseudo, string $mail, string $mdp, string $mdp2): string {
+function register(PDO $pdo, string $pseudo, string $mail, string $mdp, string $mdp2): string
+{
 
-    if(empty($pseudo) || empty($mail) || empty($mdp) || empty($mdp2)){
+    if (empty($pseudo) || empty($mail) || empty($mdp) || empty($mdp2)) {
         return "Tous les champs doivent être remplis.";
     }
 
-     if (strlen($pseudo) > 255) return "Votre pseudo ne doit pas dépasser 255 caractères.";
-   $stmt = $pdo->prepare("SELECT id FROM membres WHERE pseudo = :pseudo");
+    if (strlen($pseudo) > 255) return "Votre pseudo ne doit pas dépasser 255 caractères.";
+    $stmt = $pdo->prepare("SELECT id FROM membres WHERE pseudo = :pseudo");
     $stmt->execute([':pseudo' => $pseudo]);
     if ($stmt->rowCount() > 0) return "Ce pseudo est déjà utilisé.";
 
@@ -34,14 +36,14 @@ function register(PDO $pdo, string $pseudo, string $mail, string $mdp, string $m
     return "success";
 }
 
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
-   $pseudo = strip_tags($_POST['pseudo'] ?? '');
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $pseudo = strip_tags($_POST['pseudo'] ?? '');
     $mail   = filter_input(INPUT_POST, 'mail', FILTER_SANITIZE_EMAIL) ?? '';
     $mdp    = $_POST['mdp'] ?? '';
     $mdp2   = $_POST['mdp2'] ?? '';
 
- $result = register($pdo, $pseudo, $mail, $mdp, $mdp2);
-     if ($result === "success") {
+    $result = register($pdo, $pseudo, $mail, $mdp, $mdp2);
+    if ($result === "success") {
         // Message flash persistant en session → redirige vers connexion
         flash_set('success', "Compte créé avec succès ! Vous pouvez maintenant vous connecter.");
         header("Location: connexion.php");
@@ -62,22 +64,22 @@ include 'header.php';
     <form method="POST" action="">
         <div class="form-group">
             <label for="pseudo">Pseudo</label>
-            <input type="text" placeholder="Votre pseudo" id="pseudo" name="pseudo"  />
+            <input type="text" placeholder="Votre pseudo" id="pseudo" name="pseudo" />
         </div>
 
         <div class="form-group">
             <label for="mail">Adresse E-mail</label>
-            <input type="email" placeholder="votre@email.com" id="mail" name="mail"  />
+            <input type="email" placeholder="votre@email.com" id="mail" name="mail" />
         </div>
 
         <div class="form-group">
             <label for="mdp">Mot de passe</label>
-            <input type="password" placeholder="8 caractères min. (lettre + chiffre)" id="mdp" name="mdp"  />
+            <input type="password" placeholder="8 caractères min. (lettre + chiffre)" id="mdp" name="mdp" />
         </div>
 
         <div class="form-group">
             <label for="mdp2">Confirmer le mot de passe</label>
-            <input type="password" placeholder="Confirmez votre mot de passe" id="mdp2" name="mdp2"  />
+            <input type="password" placeholder="Confirmez votre mot de passe" id="mdp2" name="mdp2" />
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
