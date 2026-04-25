@@ -21,6 +21,7 @@ function authenticateUser(PDO $pdo, string $mailconnect, string $mdpconnect): st
     $_SESSION['id'] = $userinfo['id'];
     $_SESSION['pseudo'] = $userinfo['pseudo'];
     $_SESSION['mail'] = $userinfo['mail'];
+    // $_SESSION['avatar'] = $userinfo['avatar'];
     $_SESSION['role'] = $userinfo['role'];
     return "success";
 }
